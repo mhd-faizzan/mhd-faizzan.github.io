@@ -83,7 +83,8 @@ export const experiences: Experience[] = [
       "Tracked and reported key operational KPIs including scheduled headway compliance, trip efficiency, and travel time regularity across the BRT network.",
       "Automated the KPI reporting pipeline in Python, replacing a manual Excel workflow and cutting reporting time by 70%.",
       "Analysed passenger ridership data using time series decomposition to identify demand patterns; presented findings through interactive Tableau dashboards to support operational decision-making.",
-      "Built a bulk-processing Python pipeline for fleet inspection reporting — extracted timestamps from source files, generated structured Excel reports, and cut preparation time by ~80%.",
+      "Built a bulk-processing Python pipeline for fleet inspection reporting: extracted timestamps from source files, generated structured Excel reports, and cut preparation time by ~80%.",
+      "Maintained daily fleet maintenance records and monitored BRT system demand to support future planning and fleet optimisation.",
     ],
   },
   {
@@ -196,7 +197,7 @@ export const projects: Project[] = [
     title: "Privacy-Aware RAG Bot",
     tech: ["Python", "Flask", "Auth0 FGA", "Groq LLM", "FAISS", "HuggingFace Embeddings"],
     description:
-      "RAG chatbot with document-level authorization using Auth0 FGA, built at MLH Global Hack Week. Before retrieval, only documents the logged-in user is permitted to see are loaded into FAISS. Role-based access (manager vs employee) means unauthorized document exposure is structurally impossible.",
+      "Standard RAG retrieves by what you ask — this one retrieves by who you are. Built at MLH Global Hack Week using Auth0 FGA, FAISS, and Groq (Llama 3.3 70B). FGA checks document-level permissions before retrieval, so unauthorized documents never enter the pipeline. Same question, different user, different result.",
     year: "",
     githubLink: "https://github.com/mhd-faizzan/privacy-aware-rag-bot",
   },
@@ -232,7 +233,7 @@ export const projects: Project[] = [
     title: "FactVerify AI",
     tech: ["Python", "Streamlit", "Fact-Checking APIs", "B2B/B2C Monetisation"],
     description:
-      "AI-powered fact-checking MVP (Technical Lead, Smart Startup Garage). Verifies claims against .gov, .edu, and DOI sources. Dual revenue model: €9.99/mo consumer tier + €0.01/query API. Sized a €9.1B TAM and prepared a €150K pre-seed ask. Earned Grade 1 — top score — for the investor pitch and live demo.",
+      "AI fact-checker that verifies claims against academic and government sources (.gov, .edu, DOI) and returns cited answers — built as Technical Lead during Smart Startup Garage. Powered by Groq (LLaMA 3.1 8B) with Firebase Auth and Streamlit. Pitched live with a working demo, earned Grade 1.",
     year: "",
     githubLink: "https://github.com/mhd-faizzan/Factverify_Ai",
   },
@@ -241,7 +242,7 @@ export const projects: Project[] = [
     title: "KaufDa Deal Finder",
     tech: ["Python", "Flask", "React", "MySQL", "GitHub Actions", "Vercel", "Render"],
     description:
-      "Full-stack scraping app pulling live supermarket deals from Lidl, Rewe, Netto, and Kaufland via KaufDa's internal API. Full pipeline: Python scraper → MySQL → Flask REST API → React frontend. CI/CD: GitHub Actions auto-scrape, Render backend, Vercel frontend.",
+      "Built out of frustration with checking every supermarket app separately. Scrapes KaufDa's internal API for live deals from Lidl, Rewe, Netto, and Kaufland — search a product across all stores at once, and the cheapest result gets flagged automatically. Filter by category, sort by discount or price, and refresh on demand. Pipeline: Python scraper → MySQL → Flask REST API → React frontend, with GitHub Actions handling weekly auto-scraping.",
     year: "",
     githubLink: "https://github.com/mhd-faizzan/kaufda_deal_finder",
   },

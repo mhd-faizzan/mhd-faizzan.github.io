@@ -44,7 +44,7 @@ export default function Education() {
               {edu.courses && edu.courses.length > 0 && (
                 <div className="pl-6">
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                    Relevant Coursework
+                    Major Coursework
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {edu.courses.map((course) => (
