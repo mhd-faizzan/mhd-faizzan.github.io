@@ -56,6 +56,18 @@ export const education: Education[] = [
     location: "Peshawar, Pakistan",
     period: "Sep 2019 – Aug 2023",
     gpa: "1.8",
+    courses: [
+      "Engineering Mathematics",
+      "Operations Research",
+      "Production & Manufacturing Systems",
+      "Quality Engineering & Management",
+      "Supply Chain & Logistics Management",
+      "Work Study & Ergonomics",
+      "Engineering Economics & Management",
+      "Simulation & Modeling",
+      "Project Management",
+      "Statistics & Data Analysis",
+    ],
   },
 ];
 

@@ -3,7 +3,6 @@ import { Link as ScrollLink } from "react-scroll";
 import SocialLinks from "@/components/ui/SocialLinks";
 import { about } from "@/data/profile";
 import { menuItems } from "@/data/navigation";
-import InstallPrompt from "@/components/ui/InstallPrompt";
 
 export default function Footer() {
   return (
@@ -60,7 +59,6 @@ export default function Footer() {
               <div className="flex gap-4">
                 <SocialLinks />
               </div>
-              <InstallPrompt />
             </div>
           </div>
         </div>
