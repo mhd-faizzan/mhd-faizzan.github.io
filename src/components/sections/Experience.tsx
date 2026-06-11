@@ -1,0 +1,57 @@
+import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { experiences } from "@/data/profile";
+
+export default function Experience() {
+  return (
+    <section id="experience" className="py-10 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 xl:px-0">
+        <div className="text-left xl:text-center mb-10">
+          <h2 className="text-3xl font-bold mb-4 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            Experience
+          </h2>
+        </div>
+        <div className="space-y-6">
+          {experiences.map((exp) => (
+            <div
+              key={exp.id}
+              className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-200"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-2 mb-5">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <Briefcase size={16} className="text-blue-600 shrink-0" />
+                    <h3 className="text-lg font-bold text-gray-900">{exp.role}</h3>
+                  </div>
+                  <p className="text-base font-semibold text-blue-600 pl-6">
+                    {exp.company}
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3 mt-1.5 pl-6">
+                    <div className="flex items-center gap-1 text-gray-500 text-sm">
+                      <MapPin size={13} />
+                      <span>{exp.location}</span>
+                    </div>
+                    <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100 rounded-full">
+                      {exp.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 text-gray-500 text-sm pl-6 lg:pl-0 shrink-0">
+                  <Calendar size={13} />
+                  <span>{exp.period}</span>
+                </div>
+              </div>
+              <ul className="space-y-2.5 pl-6">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-gray-600 leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                    <span className="flex-1 text-justify">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
